@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "symcalc"
+version = "0.1.0"
+description = "A command-line symbolic math tool built with SymPy."
+authors = [{ name = "Your Name", email = "you@example.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "sympy>=1.12",
+]
+
+[project.scripts]
+symcalc = "symcalc.cli:main"
