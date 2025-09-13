@@ -174,8 +174,6 @@ def eval_expr(expr_str: str, substitutions: dict[str, str | float | int] | None 
 
     The substitutions dict maps variable names to values (strings or numbers). If numeric is True,
     evaluate the result to a floating-point number.
-
-    [ai_marker]
     """
     expr = parse_expression(expr_str)
     if substitutions:
@@ -184,6 +182,7 @@ def eval_expr(expr_str: str, substitutions: dict[str, str | float | int] | None 
             sym = Symbol(key)
             subs[sym] = parse_expression(str(value)) if isinstance(value, str) else value
         expr = expr.subs(subs)
+    # [do-marker]
     return expr.evalf() if numeric else expr
 
 
