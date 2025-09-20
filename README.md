@@ -31,6 +31,54 @@ pip install .
 
 ## Usage
 
+## Quick Start
+
+Here are some common operations you can perform with `symcalc`:
+
+- **Simplify an algebraic expression:**
+
+  ```bash
+  symcalc simplify "2*x + 3*x - 5"
+  # Output: 5*x - 5
+  ```
+
+- **Expand a product:**
+
+  ```bash
+  symcalc expand "(x + 2)*(x - 2)"
+  # Output: x**2 - 4
+  ```
+
+- **Factor an expression:**
+
+  ```bash
+  symcalc factor "x**2 - 5*x + 6"
+  # Output: (x - 2)*(x - 3)
+  ```
+
+- **Differentiate an expression:**
+
+  ```bash
+  symcalc diff "sin(x)" x
+  # Output: cos(x)
+  ```
+
+- **Integrate an expression:**
+
+  ```bash
+  symcalc integrate "x**2" x
+  # Output: x**3/3
+  ```
+
+- **Evaluate an expression numerically:**
+
+  ```bash
+  symcalc eval "x**2 + y**2" --subs x=3 --subs y=4 --numeric
+  # Output: 25
+  ```
+
+Run `symcalc --help` to see all available commands and options.
+
 Use the `symcalc` command followed by a subcommand and an expression:
 
 ```bash
